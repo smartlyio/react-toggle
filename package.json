@@ -5,6 +5,7 @@
   "main": "dist/component/index.js",
   "style": "src/style.css",
   "scripts": {
+    "preinstall": "npm run build-component",
     "prepublish": "npm run build && cp -rv dist/docs/* docs/",
     "build-component": "babel src/component --out-dir dist/component",
     "build-docs": "webpack",
